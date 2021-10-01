@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>link}}
+</head>
+<body>
+    {{>navbar}}
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="mid col-md-6">
+                <div class="card">
+                    <div class="card-header">Register</div>
+                    <div class="card-body">
+                        <form class="my-form" name="my-form" action="/register" method="post">
+                           
+                            <div class="form-group row">
+                                <label for="username" class="col-md-4 col-form-label text-md-right">User Name</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="full_name" class="form-control" autocomplete="off" placeholder="Enter User Name" name="uname" required> 
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
+                                <div class="col-md-8">
+                                    <input type="email" id="email_address" class="form-control" autocomplete="off" placeholder="Enter Email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <div class="col-md-8">
+                                    <input type="password" id="user_name" class="form-control" autocomplete="off" placeholder="Enter Password" name="password" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
+                                <label for="confirmpassword" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
+                                <div class="col-md-8">
+                                    <input type="password" id="phone_number" class="form-control" autocomplete="off" placeholder="Enter Confirm Password" name="confpassword" required>
+                                </div>
+                            </div>
+                                
+                                <div class="col-md-6 offset-md-4 buton">
+                                    <button type="submit" class="btn btn-primary">
+                                    Register
+                                    </button>
+                                </div>
+                            <p>Already have account? <a href="/login">Login Here</a></p>    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    {{>footer}}
+</body>
+</html>
