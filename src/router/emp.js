@@ -20,7 +20,7 @@ router.get('/logout', auth, async(req,res)=>{
         req.user.tokens = req.user.tokens.filter((currentelement)=>{
             return currentelement.token !== req.token
         })
-        req.us.tokens = []
+        req.tokens = []
         res.clearCookie('jwt')
         console.log('logout successful')
         await req.user.save()
